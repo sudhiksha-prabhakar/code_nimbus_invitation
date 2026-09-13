@@ -33,7 +33,7 @@ export default function Schedule() {
             <div
               className="timeline-row"
               key={ev.title}
-              style={{ animationDelay: `${0.35 + i * 0.3}s` }}
+              style={{ animationDelay: `${0.5 + i * 0.45}s` }}
             >
               <div className="timeline-icon">
                 <ev.icon />

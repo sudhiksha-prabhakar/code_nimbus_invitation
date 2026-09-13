@@ -51,7 +51,7 @@ export default function Countdown() {
           <div
             className="countdown-unit"
             key={u.label}
-            style={{ animationDelay: `${0.4 + i * 0.15}s` }}
+            style={{ animationDelay: `${0.6 + i * 0.3}s` }}
           >
             <span className="value">{String(u.value).padStart(2, "0")}</span>
             <span className="label">{u.label}</span>

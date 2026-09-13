@@ -262,11 +262,11 @@ section {
 }
 
 .countdown.visible .script-heading {
-  animation: popInStagger 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+  animation: popInStagger 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) 0.15s forwards;
 }
 
 .countdown.visible .heart-divider {
-  animation: popInStagger 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+  animation: popInStagger 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) 0.45s forwards;
 }
 
 .cd-palm {
@@ -317,38 +317,38 @@ section {
 
 /* Animated corner pop-in entrance when scrolled into view */
 .countdown.visible .cd-palm.tl {
-  animation: cdPopTL 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards;
+  animation: cdPopTL 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.2s forwards;
 }
 
 .countdown.visible .cd-floral.tr {
-  animation: cdPopTR 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+  animation: cdPopTR 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.5s forwards;
 }
 
 .countdown.visible .cd-floral.bl {
-  animation: cdPopBL 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s forwards;
+  animation: cdPopBL 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.8s forwards;
 }
 
 .countdown.visible .cd-palm.br {
-  animation: cdPopBR 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s forwards;
+  animation: cdPopBR 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 1.1s forwards;
 }
 
 @keyframes cdPopTL {
-  0% { opacity: 0; transform: translate(-30px, -30px) scale(0.8); }
+  0% { opacity: 0; transform: translate(-40px, -40px) scale(0.75); }
   100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 
 @keyframes cdPopTR {
-  0% { opacity: 0; transform: translate(30px, -30px) scale(0.8); }
+  0% { opacity: 0; transform: translate(40px, -40px) scale(0.75); }
   100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 
 @keyframes cdPopBL {
-  0% { opacity: 0; transform: translate(-30px, 30px) scale(0.8); }
+  0% { opacity: 0; transform: translate(-40px, 40px) scale(0.75); }
   100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 
 @keyframes cdPopBR {
-  0% { opacity: 0; transform: translate(30px, 30px) scale(0.8) scale(-1, -1); }
+  0% { opacity: 0; transform: translate(40px, 40px) scale(0.75) scale(-1, -1); }
   100% { opacity: 1; transform: translate(0, 0) scale(1) scale(-1, -1); }
 }
 
@@ -370,7 +370,7 @@ section {
 }
 
 .countdown.visible .countdown-unit {
-  animation: popInStagger 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: popInStagger 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) forwards;
 }
 .countdown-unit .value {
   font-size: 46px;
@@ -416,27 +416,27 @@ section {
 }
 
 .bride-groom.visible .script-heading {
-  animation: slowPopIn 1.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.1s forwards;
+  animation: slowPopIn 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.2s forwards;
 }
 
 .bride-groom.visible .heart-divider {
-  animation: slowPopIn 1.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.28s forwards;
+  animation: slowPopIn 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.5s forwards;
 }
 
 .bride-groom.visible .bg-side.left {
-  animation: slowPopIn 1.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.45s forwards;
+  animation: slowPopIn 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.8s forwards;
 }
 
 .bride-groom.visible .bg-photo-wrapper {
-  animation: slowPopIn 1.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.62s forwards;
+  animation: slowPopIn 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 1.1s forwards;
 }
 
 .bride-groom.visible .bg-side.right {
-  animation: slowPopIn 1.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.8s forwards;
+  animation: slowPopIn 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 1.4s forwards;
 }
 
 .bride-groom.visible .bg-bg-leaf {
-  animation: slowPopIn 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.2s forwards;
+  animation: slowPopIn 3.0s cubic-bezier(0.25, 1.4, 0.4, 1) 0.3s forwards;
 }
 
 @keyframes slowPopIn {
@@ -889,7 +889,7 @@ section {
   flex: 0 0 400px;
   opacity: 0;
   transform: translateY(30px) scale(0.92);
-  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+  transition: opacity 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) 0.3s, transform 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) 0.3s;
 }
 
 .schedule.visible .sched-img-wrap {
@@ -918,7 +918,7 @@ section {
 }
 
 .schedule.visible .timeline-row {
-  animation: popInStagger 1.4s cubic-bezier(0.25, 1.4, 0.4, 1) forwards;
+  animation: popInStagger 2.2s cubic-bezier(0.25, 1.4, 0.4, 1) forwards;
 }
 
 @keyframes popInStagger {
@@ -994,15 +994,15 @@ section {
 }
 
 .venue.visible .venue-title {
-  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.1s forwards;
+  animation: popInStagger 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.2s forwards;
 }
 
 .venue.visible .venue-address {
-  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.28s forwards;
+  animation: popInStagger 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.5s forwards;
 }
 
 .venue.visible .btn-outline {
-  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.45s forwards;
+  animation: popInStagger 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) 0.8s forwards;
 }
 
 .venue-floral {
@@ -1043,19 +1043,19 @@ section {
 
 /* Very Slow Entrance Pop-In on Scroll for Venue Watercolor Floral Bouquets */
 .venue.visible .venue-floral.tl {
-  animation: venuePopTL 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.15s forwards;
+  animation: venuePopTL 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.3s forwards;
 }
 
 .venue.visible .venue-floral.tr {
-  animation: venuePopTR 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.35s forwards;
+  animation: venuePopTR 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.7s forwards;
 }
 
 .venue.visible .venue-floral.bl {
-  animation: venuePopBL 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.55s forwards;
+  animation: venuePopBL 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 1.1s forwards;
 }
 
 .venue.visible .venue-floral.br {
-  animation: venuePopBR 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.75s forwards;
+  animation: venuePopBR 2.6s cubic-bezier(0.25, 1.4, 0.4, 1) 1.5s forwards;
 }
 
 @keyframes venuePopTL {
@@ -1153,27 +1153,27 @@ section {
 }
 
 .visible .floral-corner .flower-item.flower-1 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.1s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.2s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-2 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.28s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.5s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-3 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.46s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 0.8s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-4 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.64s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 1.1s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-5 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.82s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 1.4s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-6 {
-  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 1.0s forwards;
+  animation: flowerPop 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) 1.7s forwards;
 }
 
 @keyframes flowerPop {
@@ -1502,7 +1502,7 @@ section {
 
 /* ---------- site enter & home element animations ---------- */
 .site-enter {
-  animation: siteFadeIn 0.8s ease both;
+  animation: siteFadeIn 2.2s ease both;
 }
 @keyframes siteFadeIn {
   from {
@@ -1613,47 +1613,47 @@ section {
 }
 
 .site-enter .navbar {
-  animation: animSlideFromTop 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: animSlideFromTop 2.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .site-enter .string-lights {
-  animation: animLightsDown 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  animation: animLightsDown 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .site-enter .hero-tagline.anim-top-left {
-  animation: animFromTopLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  animation: animFromTopLeft 2.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
 
 .site-enter .hero-vine.anim-pop-1 {
-  animation: animPopVine 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  animation: animPopVine 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
 
 .site-enter .hero-names.anim-left {
-  animation: animFromLeft 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  animation: animFromLeft 2.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
 }
 
 .site-enter .hero-vine.anim-pop-2 {
-  animation: animPopVine 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+  animation: animPopVine 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
 }
 
 .site-enter .hero-date.anim-bottom-left {
-  animation: animFromBottomLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+  animation: animFromBottomLeft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
 }
 
 .site-enter .hero-venue.anim-bottom-left-delay {
-  animation: animFromBottomLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+  animation: animFromBottomLeft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
 }
 
 .site-enter .hero-btn.anim-bottom-btn {
-  animation: animFromBottomBtn 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+  animation: animFromBottomBtn 2.6s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both;
 }
 
 .site-enter .hero-right.anim-right {
-  animation: animFromRight 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  animation: animFromRight 2.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
 
 .site-enter .hero-bottom-floral-track {
-  animation: animFromBottomFloral 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  animation: animFromBottomFloral 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
 }
 
 /* ---------- cover page ---------- */
@@ -1667,7 +1667,7 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  animation: coverFadeIn 0.8s ease both;
+  animation: coverFadeIn 2.2s ease both;
 }
 .cover-page.closing {
   animation: coverFadeOut 4s ease both;
@@ -1774,25 +1774,25 @@ section {
   top: 0;
   left: 0;
   transform-origin: 0% 0%;
-  animation: floralPopInTL 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: floralPopInTL 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 .cover-floral.tr {
   top: 0;
   right: 0;
   transform-origin: 50% 50%;
-  animation: floralPopInTR 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: floralPopInTR 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 .cover-floral.bl {
   bottom: 0;
   left: 0;
   transform-origin: 50% 50%;
-  animation: floralPopInBL 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: floralPopInBL 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 .cover-floral.br {
   bottom: 0;
   right: 0;
   transform-origin: 100% 100%;
-  animation: floralPopInBR 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: floralPopInBR 2.5s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 
 @keyframes floralPopInTL {
@@ -1944,10 +1944,10 @@ section {
   filter: contrast(1.04);
 }
 .cover-figure.bride {
-  animation: floatBride 5s ease-in-out infinite, slideInLeft 0.9s ease both;
+  animation: floatBride 6s ease-in-out infinite, slideInLeft 2.8s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 .cover-figure.groom {
-  animation: floatGroom 5.5s ease-in-out infinite, slideInRight 0.9s ease both;
+  animation: floatGroom 6s ease-in-out infinite, slideInRight 2.8s cubic-bezier(0.25, 1.4, 0.4, 1) both;
 }
 @keyframes slideInLeft {
   from {
@@ -2047,22 +2047,22 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(14px);
-  animation: fadeInUp 0.7s ease forwards;
+  animation: fadeInUp 2.4s cubic-bezier(0.25, 1.4, 0.4, 1) forwards;
 }
 .fade-in.d1 {
-  animation-delay: 0.15s;
+  animation-delay: 0.3s;
 }
 .fade-in.d2 {
-  animation-delay: 0.35s;
+  animation-delay: 0.7s;
 }
 .fade-in.d3 {
-  animation-delay: 0.5s;
+  animation-delay: 1.1s;
 }
 .fade-in.d4 {
-  animation-delay: 0.75s;
+  animation-delay: 1.5s;
 }
 .fade-in.d5 {
-  animation-delay: 0.95s;
+  animation-delay: 1.9s;
 }
 @keyframes fadeInUp {
   to {
