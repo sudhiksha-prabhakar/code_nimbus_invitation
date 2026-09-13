@@ -993,8 +993,8 @@ section {
 
 .floral-corner {
   position: absolute;
-  width: 150px;
-  height: 110px;
+  width: 310px;
+  height: 180px;
   pointer-events: none;
   z-index: 2;
 }
@@ -1022,7 +1022,7 @@ section {
   transform: scale(-1, -1);
 }
 
-/* Staggered Pop-Up Entrance for Flowers */
+/* Staggered Very Slow Pop-Up Entrance for Flowers */
 .floral-corner .flower-item {
   opacity: 0;
   transform: scale(0) rotate(-25deg);
@@ -1030,23 +1030,27 @@ section {
 }
 
 .visible .floral-corner .flower-item.flower-1 {
-  animation: flowerPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.12s forwards;
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.1s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-2 {
-  animation: flowerPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.24s forwards;
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.28s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-3 {
-  animation: flowerPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.36s forwards;
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.46s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-4 {
-  animation: flowerPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.48s forwards;
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.64s forwards;
 }
 
 .visible .floral-corner .flower-item.flower-5 {
-  animation: flowerPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 0.82s forwards;
+}
+
+.visible .floral-corner .flower-item.flower-6 {
+  animation: flowerPop 1.8s cubic-bezier(0.25, 1.4, 0.4, 1) 1.0s forwards;
 }
 
 @keyframes flowerPop {
@@ -1055,7 +1059,7 @@ section {
     transform: scale(0) rotate(-35deg);
   }
   70% {
-    transform: scale(1.18) rotate(6deg);
+    transform: scale(1.16) rotate(6deg);
   }
   100% {
     opacity: 1;

@@ -191,14 +191,15 @@ export function Flower({ size = 46, petalColor, centerColor = "#8a4a1f", style, 
 }
 
 export function FloralCorner({ className = "" }) {
-  const palette = ["#E4A15B", "#D8712E", "#F1D3B0", "#C1601F", "#F7A862"];
+  const palette = ["#F1D3B0", "#D8712E", "#E4A15B", "#C1601F", "#F7A862", "#FFFFFF"];
   return (
     <div className={`floral-corner ${className}`}>
-      <Flower size={56} petalColor={palette[0]} className="flower-1" style={{ position: "absolute", left: 0, bottom: 0 }} />
-      <Flower size={42} petalColor={palette[1]} className="flower-2" style={{ position: "absolute", left: 26, bottom: 20 }} />
-      <Flower size={68} petalColor={palette[2]} className="flower-3" style={{ position: "absolute", left: 44, bottom: -6 }} />
-      <Flower size={34} petalColor={palette[3]} className="flower-4" style={{ position: "absolute", left: 78, bottom: 18 }} />
-      <Flower size={46} petalColor={palette[4]} className="flower-5" style={{ position: "absolute", left: 102, bottom: 0 }} />
+      <Flower size={95} petalColor={palette[0]} className="flower-1" style={{ position: "absolute", left: 0, bottom: 0 }} />
+      <Flower size={75} petalColor={palette[1]} className="flower-2" style={{ position: "absolute", left: 45, bottom: 42 }} />
+      <Flower size={120} petalColor={palette[2]} className="flower-3" style={{ position: "absolute", left: 70, bottom: -10 }} />
+      <Flower size={65} petalColor={palette[3]} className="flower-4" style={{ position: "absolute", left: 140, bottom: 38 }} />
+      <Flower size={85} petalColor={palette[4]} className="flower-5" style={{ position: "absolute", left: 175, bottom: 0 }} />
+      <Flower size={70} petalColor={palette[5]} className="flower-6" style={{ position: "absolute", left: 220, bottom: -5 }} />
     </div>
   );
 }
