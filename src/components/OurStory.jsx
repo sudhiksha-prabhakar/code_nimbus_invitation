@@ -1,7 +1,7 @@
 import { useState } from "react";
 import storyCouple from "../assets/story-couple.png";
 import proposalPhoto from "../assets/proposal-photo.png";
-import { HeartDivider, LeafBranch } from "./Decor";
+import { HeartDivider, LineArtBranch } from "./Decor";
 import Reveal from "./Reveal";
 
 const MILESTONES = [
@@ -25,17 +25,17 @@ export default function OurStory() {
       <HeartDivider />
 
       <div className="story-grid">
-        <div className="story-photo">
+        <div className="story-photo-frame">
           <img src={storyCouple} alt="Rahul and Ramya" />
         </div>
-        <div className="story-quote">
-          <p>
-            "Finding a rhythm that feels like home. No matter where the road
-            leads or how it turns. Everything feels right when standing side
-            by side."
+        <div className="story-card">
+          <LineArtBranch className="story-leaf tr" />
+          <LineArtBranch className="story-leaf br" />
+          <h3 className="story-card-names">Ramya Sharma &amp; Rahul Verma</h3>
+          <p className="story-card-quote">
+            &quot; Two individuals, one collective direction. Finding a rhythm that feels like home. No matter where the road leads or how it turns. Everything feels right when standing side by side. &quot;
           </p>
         </div>
-        <LeafBranch className="story-leaf" />
       </div>
 
       <div className="chapter-heading">

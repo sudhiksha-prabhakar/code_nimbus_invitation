@@ -65,6 +65,33 @@ export function LeafBranch({ className = "", flip = false }) {
   );
 }
 
+export function LineArtBranch({ className = "", flip = false }) {
+  return (
+    <svg
+      className={`line-art-branch ${className}`}
+      style={flip ? { transform: "scaleX(-1)" } : undefined}
+      width="100"
+      height="140"
+      viewBox="0 0 100 140"
+      fill="none"
+    >
+      <g stroke="#5F2118" strokeWidth="1.6" strokeLinecap="round">
+        <path d="M 50,135 Q 48,70 48,5" />
+        <path d="M 49,112 L 20,95" />
+        <path d="M 49,112 L 80,95" />
+        <path d="M 48,88 L 16,70" />
+        <path d="M 48,88 L 82,70" />
+        <path d="M 48,64 L 20,45" />
+        <path d="M 48,64 L 78,45" />
+        <path d="M 48,42 L 26,24" />
+        <path d="M 48,42 L 72,24" />
+        <path d="M 48,22 L 35,8" />
+        <path d="M 48,22 L 62,8" />
+      </g>
+    </svg>
+  );
+}
+
 export function PalmLeafBranch({ className = "", flip = false }) {
   return (
     <svg
