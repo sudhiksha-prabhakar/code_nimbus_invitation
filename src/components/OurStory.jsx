@@ -9,6 +9,7 @@ const MILESTONES = [
     date: "21st July 2024",
     title: "The Proposal",
     photo: proposalPhoto,
+    desc: "A magical evening filled with love, laughter, and a promise for forever under the starlit sky.",
   },
 ];
 
@@ -40,13 +41,18 @@ export default function OurStory() {
 
       <div className="chapter-heading">
         <h3>The Chapter Begins</h3>
-        <span className="chapter-arrow">&#8594;</span>
+        <svg className="chapter-arrow-svg" width="110" height="16" viewBox="0 0 110 16" fill="none">
+          <path d="M 0,8 H 102 M 94,2 L 104,8 L 94,14" stroke="#5F2118" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
 
       <div className="milestone-card">
         <p className="milestone-date">{milestone.date}</p>
         <h4 className="milestone-title">{milestone.title}</h4>
-        <img src={milestone.photo} alt={milestone.title} />
+        <div className="milestone-photo-wrap">
+          <img src={milestone.photo} alt={milestone.title} />
+        </div>
+        {milestone.desc && <p className="milestone-desc">{milestone.desc}</p>}
       </div>
 
       <div className="milestone-nav">
