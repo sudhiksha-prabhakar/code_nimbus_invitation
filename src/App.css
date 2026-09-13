@@ -1590,24 +1590,25 @@ section {
 /* ---------- gallery page ---------- */
 .gallery-page {
   background: #fff;
-  padding: 70px 40px 90px;
+  padding: 90px 60px 110px;
   text-align: center;
-  min-height: 500px;
+  min-height: 600px;
 }
 .upload-btn {
-  margin-top: 40px;
-  padding: 13px 40px;
+  margin-top: 50px;
+  padding: 17px 56px;
   background: #e8a97a;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-family: var(--font-script);
-  font-size: 20px;
+  font-size: 26px;
+  cursor: pointer;
 }
 .gallery-empty {
-  margin-top: 60px;
+  margin-top: 70px;
   color: #9a9a9a;
-  font-size: 15px;
+  font-size: 19px;
 }
 .gallery-grid {
   margin-top: 50px;
@@ -1620,7 +1621,7 @@ section {
 }
 .gallery-item img {
   width: 100%;
-  height: 180px;
+  height: 240px;
   object-fit: cover;
   border: 2px solid var(--maroon-2);
 }
@@ -1632,13 +1633,14 @@ section {
   margin-top: 50px;
 }
 .gallery-pager button {
-  width: 38px;
-  height: 38px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   background: var(--orange);
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
+  cursor: pointer;
 }
 .gallery-pager button:disabled {
   background: #f0c9a8;
@@ -1646,7 +1648,7 @@ section {
 }
 .gallery-pager span {
   font-family: var(--font-script);
-  font-size: 20px;
+  font-size: 26px;
   color: var(--text);
 }
 
