@@ -6,16 +6,8 @@ import floralBr from "../assets/floral-br.png";
 
 export default function Hero() {
   const floralItems = [
-    { src: floralBl, type: "left" },
-    { src: floralBr, type: "right" },
-    { src: floralBl, type: "left" },
-    { src: floralBr, type: "right" },
-    { src: floralBl, type: "left" },
-    { src: floralBr, type: "right" },
-    { src: floralBl, type: "left" },
-    { src: floralBr, type: "right" },
-    { src: floralBl, type: "left" },
-    { src: floralBr, type: "right" },
+    floralBl, floralBr, floralBl, floralBr, floralBl,
+    floralBr, floralBl, floralBr, floralBl, floralBr, floralBl, floralBr
   ];
 
   return (
@@ -65,10 +57,8 @@ export default function Hero() {
       </div>
 
       <div className="hero-bottom-floral-track" aria-hidden="true">
-        {floralItems.map((item, idx) => (
-          <div className={`floral-crop ${item.type}`} key={idx}>
-            <img src={item.src} alt="" />
-          </div>
+        {floralItems.map((src, idx) => (
+          <img src={src} alt="" className="floral-item" key={idx} />
         ))}
       </div>
     </Reveal>
