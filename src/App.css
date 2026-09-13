@@ -979,7 +979,7 @@ section {
 .venue {
   position: relative;
   background: var(--orange);
-  padding: 90px 40px;
+  padding: 100px 40px;
   text-align: center;
   overflow: hidden;
 }
@@ -988,19 +988,130 @@ section {
 .venue .venue-address,
 .venue .btn-outline {
   opacity: 0;
-  transform: translateY(24px) scale(0.95);
+  transform: translateY(28px) scale(0.95);
+  position: relative;
+  z-index: 5;
 }
 
 .venue.visible .venue-title {
-  animation: popInStagger 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.1s forwards;
 }
 
 .venue.visible .venue-address {
-  animation: popInStagger 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.28s forwards;
 }
 
 .venue.visible .btn-outline {
-  animation: popInStagger 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+  animation: popInStagger 1.3s cubic-bezier(0.25, 1.4, 0.4, 1) 0.45s forwards;
+}
+
+.venue-floral {
+  position: absolute;
+  width: 320px;
+  max-width: 42vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  filter: contrast(1.08) saturate(1.12);
+  opacity: 0;
+}
+
+.venue-floral.tl {
+  top: 0;
+  left: 0;
+  transform-origin: 0% 0%;
+}
+
+.venue-floral.tr {
+  top: 0;
+  right: 0;
+  transform-origin: 50% 50%;
+}
+
+.venue-floral.bl {
+  bottom: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+}
+
+.venue-floral.br {
+  bottom: 0;
+  right: 0;
+  transform-origin: 100% 100%;
+}
+
+/* Very Slow Entrance Pop-In on Scroll for Venue Watercolor Floral Bouquets */
+.venue.visible .venue-floral.tl {
+  animation: venuePopTL 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.15s forwards;
+}
+
+.venue.visible .venue-floral.tr {
+  animation: venuePopTR 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.35s forwards;
+}
+
+.venue.visible .venue-floral.bl {
+  animation: venuePopBL 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.55s forwards;
+}
+
+.venue.visible .venue-floral.br {
+  animation: venuePopBR 1.6s cubic-bezier(0.25, 1.4, 0.4, 1) 0.75s forwards;
+}
+
+@keyframes venuePopTL {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translate(-40px, -40px) rotate(-12deg);
+  }
+  70% {
+    transform: scale(1.08) translate(0, 0) rotate(2deg);
+  }
+  100% {
+    opacity: 0.96;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes venuePopTR {
+  0% {
+    opacity: 0;
+    transform: scaleX(-1) scale(0.5) translate(40px, -40px) rotate(-12deg);
+  }
+  70% {
+    transform: scaleX(-1) scale(1.08) translate(0, 0) rotate(2deg);
+  }
+  100% {
+    opacity: 0.96;
+    transform: scaleX(-1) scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes venuePopBL {
+  0% {
+    opacity: 0;
+    transform: scaleX(-1) scale(0.5) translate(-40px, 40px) rotate(12deg);
+  }
+  70% {
+    transform: scaleX(-1) scale(1.08) translate(0, 0) rotate(-2deg);
+  }
+  100% {
+    opacity: 0.96;
+    transform: scaleX(-1) scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes venuePopBR {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translate(40px, 40px) rotate(-12deg);
+  }
+  70% {
+    transform: scale(1.08) translate(0, 0) rotate(-2deg);
+  }
+  100% {
+    opacity: 0.96;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
 }
 
 .floral-corner {

@@ -1,13 +1,15 @@
-import { FloralCorner } from "./Decor";
+import floralTl from "../assets/big-floral-tl.png";
+import floralBr from "../assets/big-floral-br.png";
 import Reveal from "./Reveal";
 
 export default function Venue() {
   return (
     <Reveal as="section" className="venue">
-      <FloralCorner className="corner tl" />
-      <FloralCorner className="corner tr" />
-      <FloralCorner className="corner bl" />
-      <FloralCorner className="corner br" />
+      <img src={floralTl} alt="" className="venue-floral tl" />
+      <img src={floralTl} alt="" className="venue-floral tr" />
+      <img src={floralBr} alt="" className="venue-floral bl" />
+      <img src={floralBr} alt="" className="venue-floral br" />
+
       <h2 className="venue-title">Royal Orchid Convention Center</h2>
       <p className="venue-address">
         Royal Palace, HAL 2nd Stage, Bengaluru, Karnataka 560008
