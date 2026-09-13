@@ -1,17 +1,17 @@
-import { PhoneIcon, MusicIcon } from "./Decor";
+import { PhoneIcon } from "./Decor";
 
-export default function FloatingButtons({ isPlaying = false, onToggleMusic }) {
+export default function FloatingButtons() {
   return (
     <div className="floating-buttons">
       <a className="fbtn" href="tel:+910000000000" aria-label="Call">
         <PhoneIcon />
       </a>
       <button
-        className={`fbtn ${isPlaying ? "spin" : ""}`}
-        aria-label="Toggle music"
-        onClick={onToggleMusic}
+        className="fbtn"
+        aria-label="Call"
+        onClick={() => {}}
       >
-        <MusicIcon />
+        <PhoneIcon />
       </button>
     </div>
   );
