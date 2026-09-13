@@ -1525,7 +1525,39 @@ section {
   background: var(--orange);
   padding: 70px 40px 90px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Large watercolor florals blended on both sides */
+.families-floral {
+  position: absolute;
+  width: 420px;
+  max-width: 38vw;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.88;
+  /* Fade edges into the orange background */
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 30%, transparent 85%);
+  mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 30%, transparent 85%);
+  filter: saturate(0.85) brightness(1.05);
+  z-index: 1;
+}
+.families-floral.left {
+  left: -40px;
+  transform: translateY(-50%) rotate(0deg);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 25% 50%, black 25%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 80% at 25% 50%, black 25%, transparent 80%);
+}
+.families-floral.right {
+  right: -40px;
+  transform: translateY(-50%) scaleX(-1);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 75% 50%, black 25%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 80% at 75% 50%, black 25%, transparent 80%);
+}
+
 .family-photo {
   max-width: 720px;
   margin: 40px auto 0;

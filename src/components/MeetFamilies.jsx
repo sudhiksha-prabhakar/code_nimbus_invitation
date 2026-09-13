@@ -1,6 +1,7 @@
 import { useState } from "react";
 import brideFamily from "../assets/bride-family.png";
 import groomFamily from "../assets/groom-family.png";
+import bigFloralTl from "../assets/big-floral-tl.png";
 import { HeartDivider, FloralCorner } from "./Decor";
 import Reveal from "./Reveal";
 
@@ -9,6 +10,10 @@ export default function MeetFamilies() {
 
   return (
     <Reveal as="section" className="families">
+      {/* Big watercolor florals blended into background on both sides */}
+      <img className="families-floral left" src={bigFloralTl} alt="" aria-hidden="true" />
+      <img className="families-floral right" src={bigFloralTl} alt="" aria-hidden="true" />
+
       <FloralCorner className="corner tl" />
       <FloralCorner className="corner tr flip" />
       <h2 className="script-heading light">Meet The Families</h2>
