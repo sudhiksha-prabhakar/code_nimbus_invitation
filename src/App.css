@@ -1589,11 +1589,15 @@ section {
     opacity: 1;
   }
   48% {
-    transform: translateX(calc(50vw - 320px)) translateY(-10px);
+    transform: translateX(calc(50vw - 440px)) translateY(-10px);
+    opacity: 1;
+  }
+  65% {
+    transform: translateX(calc(50vw - 440px)) translateY(-10px);
     opacity: 1;
   }
   100% {
-    transform: translateX(calc(50vw - 320px)) translateY(120vh);
+    transform: translateX(calc(50vw - 440px)) translateY(120vh);
     opacity: 0;
   }
 }
@@ -1607,29 +1611,32 @@ section {
     opacity: 1;
   }
   48% {
-    transform: translateX(calc(-50vw + 320px)) translateY(-10px);
+    transform: translateX(calc(-50vw + 440px)) translateY(-10px);
+    opacity: 1;
+  }
+  65% {
+    transform: translateX(calc(-50vw + 440px)) translateY(-10px);
     opacity: 1;
   }
   100% {
-    transform: translateX(calc(-50vw + 320px)) translateY(120vh);
+    transform: translateX(calc(-50vw + 440px)) translateY(120vh);
     opacity: 0;
   }
 }
 .cover-page::before {
   content: "";
   position: absolute;
-  top: 42px;
-  bottom: 43px;
-  left: 280px;
-  right: 280px;
-  border-top: 1.5px solid rgba(115, 34, 28, 0.65);
-  border-bottom: 1.5px solid rgba(115, 34, 28, 0.65);
+  top: 32px;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  border: 1.5px solid rgba(115, 34, 28, 0.55);
   pointer-events: none;
   z-index: 1;
 }
 .cover-floral {
   position: absolute;
-  width: 340px;
+  width: 330px;
   z-index: 2;
   pointer-events: none;
   mix-blend-mode: multiply;
@@ -1637,44 +1644,44 @@ section {
   filter: contrast(1.05) saturate(1.1);
 }
 .cover-floral.tl {
-  top: -20px;
-  left: -20px;
-  transform-origin: top left;
+  top: 0;
+  left: 0;
+  transform-origin: 0% 0%;
   animation: floralPopInTL 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .cover-floral.tr {
-  top: -20px;
-  right: -20px;
-  transform-origin: top right;
+  top: 0;
+  right: 0;
+  transform-origin: 50% 50%;
   animation: floralPopInTR 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .cover-floral.bl {
-  bottom: -20px;
-  left: -20px;
-  transform-origin: bottom left;
+  bottom: 0;
+  left: 0;
+  transform-origin: 50% 50%;
   animation: floralPopInBL 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .cover-floral.br {
-  bottom: -20px;
-  right: -20px;
-  transform-origin: bottom right;
+  bottom: 0;
+  right: 0;
+  transform-origin: 100% 100%;
   animation: floralPopInBR 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 @keyframes floralPopInTL {
-  0% { opacity: 0; transform: scale(0.5) translate(-60px, -60px) rotate(-12deg); }
+  0% { opacity: 0; transform: scale(0.5) translate(-40px, -40px) rotate(-12deg); }
   100% { opacity: 1; transform: scale(1) translate(0, 0) rotate(0deg); }
 }
 @keyframes floralPopInTR {
-  0% { opacity: 0; transform: scale(0.5) translate(60px, -60px) rotate(12deg); }
-  100% { opacity: 1; transform: scale(1) translate(0, 0) rotate(0deg); }
+  0% { opacity: 0; transform: scaleX(-1) scale(0.5) translate(40px, -40px) rotate(-12deg); }
+  100% { opacity: 1; transform: scaleX(-1) scale(1) translate(0, 0) rotate(0deg); }
 }
 @keyframes floralPopInBL {
-  0% { opacity: 0; transform: scale(0.5) translate(-60px, 60px) rotate(12deg); }
-  100% { opacity: 1; transform: scale(1) translate(0, 0) rotate(0deg); }
+  0% { opacity: 0; transform: scaleX(-1) scale(0.5) translate(-40px, 40px) rotate(12deg); }
+  100% { opacity: 1; transform: scaleX(-1) scale(1) translate(0, 0) rotate(0deg); }
 }
 @keyframes floralPopInBR {
-  0% { opacity: 0; transform: scale(0.5) translate(60px, 60px) rotate(-12deg); }
+  0% { opacity: 0; transform: scale(0.5) translate(40px, 40px) rotate(-12deg); }
   100% { opacity: 1; transform: scale(1) translate(0, 0) rotate(0deg); }
 }
 
@@ -1713,38 +1720,57 @@ section {
 
 @keyframes floralPopOutTR {
   0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
+    transform: scaleX(-1) translate(0, 0) scale(1) rotate(0deg);
     opacity: 1;
   }
   20% {
-    transform: translate(20px, -20px) scale(1.2) rotate(8deg);
+    transform: scaleX(-1) translate(-20px, -20px) scale(1.2) rotate(-8deg);
     opacity: 1;
   }
   75% {
-    transform: translate(240px, -240px) scale(0.5) rotate(30deg);
+    transform: scaleX(-1) translate(-240px, -240px) scale(0.5) rotate(-30deg);
     opacity: 0.8;
   }
   100% {
-    transform: translate(400px, -400px) scale(0.1) rotate(45deg);
+    transform: scaleX(-1) translate(-400px, -400px) scale(0.1) rotate(-45deg);
     opacity: 0;
   }
 }
 
 @keyframes floralPopOutBL {
   0% {
+    transform: scaleX(-1) translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: scaleX(-1) translate(-20px, 20px) scale(1.2) rotate(8deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleX(-1) translate(-240px, 240px) scale(0.5) rotate(30deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(-1) translate(-400px, 400px) scale(0.1) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floralPopOutBR {
+  0% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     opacity: 1;
   }
   20% {
-    transform: translate(-20px, 20px) scale(1.2) rotate(8deg);
+    transform: translate(20px, 20px) scale(1.2) rotate(-8deg);
     opacity: 1;
   }
   75% {
-    transform: translate(-240px, 240px) scale(0.5) rotate(30deg);
+    transform: translate(240px, 240px) scale(0.5) rotate(-30deg);
     opacity: 0.8;
   }
   100% {
-    transform: translate(-400px, 400px) scale(0.1) rotate(45deg);
+    transform: translate(400px, 400px) scale(0.1) rotate(-45deg);
     opacity: 0;
   }
 }

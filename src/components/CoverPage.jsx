@@ -23,8 +23,8 @@ export default function CoverPage({ onOpen, closing }) {
   return (
     <div className={`cover-page ${closing ? "closing" : ""}`}>
       <img className="cover-floral tl" src={floralTl} alt="" aria-hidden="true" />
-      <img className="cover-floral tr" src={floralTl} style={{ transform: "scaleX(-1)" }} alt="" aria-hidden="true" />
-      <img className="cover-floral bl" src={floralBr} style={{ transform: "scaleX(-1)" }} alt="" aria-hidden="true" />
+      <img className="cover-floral tr" src={floralTl} alt="" aria-hidden="true" />
+      <img className="cover-floral bl" src={floralBr} alt="" aria-hidden="true" />
       <img className="cover-floral br" src={floralBr} alt="" aria-hidden="true" />
 
       <div className="cover-inner">
