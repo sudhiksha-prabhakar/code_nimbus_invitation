@@ -6,7 +6,7 @@ import CoverPage from "./components/CoverPage";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
-// Background music now sourced from YouTube Shorts embed
+import bgMusic from "./assets/bg-music.mp3";
 
 const PAGES = {
   home: HomePage,
@@ -18,10 +18,31 @@ function App() {
   const [page, setPage] = useState("home");
   const [showCover, setShowCover] = useState(true);
   const [closing, setClosing] = useState(false);
-// Removed legacy audio handling; background music is now a hidden YouTube iframe.
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const audioRef = useRef(null);
+
+  const startMusic = () => {
+    if (audioRef.current) {
+      audioRef.current.play().then(() => {
+        setIsPlayingMusic(true);
+      }).catch(() => {});
+    }
+  };
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+    if (isPlayingMusic) {
+      audioRef.current.pause();
+      setIsPlayingMusic(false);
+    } else {
+      audioRef.current.play().then(() => {
+        setIsPlayingMusic(true);
+      }).catch(() => {});
+    }
+  };
 
   const handleOpenInvite = () => {
-    // Music starts automatically via YouTube iframe; no explicit start needed.
+    startMusic();
     setClosing(true);
     setTimeout(() => {
       setShowCover(false);
@@ -37,7 +58,7 @@ function App() {
 
   return (
     <>
-      <iframe src="https://www.youtube.com/embed/zr2LK75_r94?autoplay=1&loop=1&playlist=zr2LK75_r94&controls=0&mute=1" style="display:none; width:0; height:0; border:0;"></iframe>
+      <audio ref={audioRef} src={bgMusic} loop />
       {showCover ? (
         <CoverPage onOpen={handleOpenInvite} closing={closing} />
       ) : (
@@ -46,7 +67,7 @@ function App() {
           <main className={`page-${page}`}>
             <Page />
           </main>
-          <FloatingButtons />
+          <FloatingButtons isPlaying={isPlayingMusic} onToggleMusic={toggleMusic} />
         </div>
       )}
     </>
