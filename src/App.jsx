@@ -46,7 +46,7 @@ function App() {
     setClosing(true);
     setTimeout(() => {
       setShowCover(false);
-    }, 4000);
+    }, 4200);
   };
 
   const handleNavigate = (id) => {

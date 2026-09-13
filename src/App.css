@@ -1836,48 +1836,22 @@ section {
   }
 }
 
-.cover-page.closing .cover-figure.bride {
-  animation: brideCloseAndExit 4s cubic-bezier(0.35, 0, 0.25, 1) forwards !important;
+/* Bride & Groom close toward center then slide down — offsets injected by JS */
+@keyframes brideClose {
+  0%   { transform: translateX(0) translateY(0) scale(1); }
+  100% { transform: translateX(var(--bride-tx, 40vw)) translateY(-8px) scale(1); }
 }
-@keyframes brideCloseAndExit {
-  0% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
-  48% {
-    transform: translateX(calc(50vw - 320px)) translateY(-10px);
-    opacity: 1;
-  }
-  65% {
-    transform: translateX(calc(50vw - 320px)) translateY(-10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(calc(50vw - 320px)) translateY(120vh);
-    opacity: 0;
-  }
+@keyframes brideExit {
+  0%   { transform: translateX(var(--bride-tx, 40vw)) translateY(-8px) scale(1); opacity: 1; }
+  100% { transform: translateX(var(--bride-tx, 40vw)) translateY(115vh) scale(0.95); opacity: 0; }
 }
-
-.cover-page.closing .cover-figure.groom {
-  animation: groomCloseAndExit 4s cubic-bezier(0.35, 0, 0.25, 1) forwards !important;
+@keyframes groomClose {
+  0%   { transform: translateX(0) translateY(0) scale(1); }
+  100% { transform: translateX(var(--groom-tx, -40vw)) translateY(-8px) scale(1); }
 }
-@keyframes groomCloseAndExit {
-  0% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
-  48% {
-    transform: translateX(calc(-50vw + 320px)) translateY(-10px);
-    opacity: 1;
-  }
-  65% {
-    transform: translateX(calc(-50vw + 320px)) translateY(-10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(calc(-50vw + 320px)) translateY(120vh);
-    opacity: 0;
-  }
+@keyframes groomExit {
+  0%   { transform: translateX(var(--groom-tx, -40vw)) translateY(-8px) scale(1); opacity: 1; }
+  100% { transform: translateX(var(--groom-tx, -40vw)) translateY(115vh) scale(0.95); opacity: 0; }
 }
 .cover-page::before {
   content: "";

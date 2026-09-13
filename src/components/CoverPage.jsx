@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import coverBride from "../assets/cover-bride.png";
 import coverGroom from "../assets/cover-groom.png";
 import floralTl from "../assets/big-floral-tl.png";
@@ -20,6 +21,49 @@ const VineFlourish = () => (
 );
 
 export default function CoverPage({ onOpen, closing }) {
+  const brideRef = useRef(null);
+  const groomRef = useRef(null);
+  const centerRef = useRef(null);
+
+  useEffect(() => {
+    if (!closing) return;
+
+    const bride = brideRef.current;
+    const groom = groomRef.current;
+    if (!bride || !groom) return;
+
+    const brideRect = bride.getBoundingClientRect();
+    const groomRect = groom.getBoundingClientRect();
+    const viewportW = window.innerWidth;
+
+    // Figure widths
+    const brideW = brideRect.width;
+    const groomW = groomRect.width;
+
+    // Side-by-side center position: they should touch at horizontal center
+    // Bride moves right so its right edge meets center (with a small gap)
+    const brideTargetX = viewportW / 2 - brideRect.left - brideW - 10;
+    // Groom moves left so its left edge meets center (with a small gap)
+    const groomTargetX = viewportW / 2 - groomRect.left + 10;
+
+    // Set CSS custom properties for the dynamic keyframe
+    bride.style.setProperty("--bride-tx", `${brideTargetX}px`);
+    groom.style.setProperty("--groom-tx", `${groomTargetX}px`);
+
+    // Trigger the closing animations
+    bride.style.animation = "none";
+    groom.style.animation = "none";
+
+    // Force reflow
+    void bride.offsetWidth;
+    void groom.offsetWidth;
+
+    // Apply closing animations using the computed values
+    bride.style.animation = "brideClose 2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards, brideExit 1.8s cubic-bezier(0.4, 0, 1, 1) 2.2s forwards";
+    groom.style.animation = "groomClose 2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards, groomExit 1.8s cubic-bezier(0.4, 0, 1, 1) 2.2s forwards";
+
+  }, [closing]);
+
   return (
     <div className={`cover-page ${closing ? "closing" : ""}`}>
       <img className="cover-floral tl" src={floralTl} alt="" aria-hidden="true" />
@@ -28,9 +72,9 @@ export default function CoverPage({ onOpen, closing }) {
       <img className="cover-floral br" src={floralBr} alt="" aria-hidden="true" />
 
       <div className="cover-inner">
-        <img className="cover-figure bride" src={coverBride} alt="Ramya" />
+        <img ref={brideRef} className="cover-figure bride" src={coverBride} alt="Ramya" />
 
-        <div className="cover-center">
+        <div ref={centerRef} className="cover-center">
           <p className="cover-eyebrow fade-in d1">A special invitation awaits you</p>
           
           <div className="cover-vine fade-in d2">
@@ -60,9 +104,8 @@ export default function CoverPage({ onOpen, closing }) {
           </button>
         </div>
 
-        <img className="cover-figure groom" src={coverGroom} alt="Rahul" />
+        <img ref={groomRef} className="cover-figure groom" src={coverGroom} alt="Rahul" />
       </div>
     </div>
   );
 }
-
