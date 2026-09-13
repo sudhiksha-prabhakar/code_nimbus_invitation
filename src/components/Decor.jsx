@@ -177,6 +177,97 @@ function Petal({ rotate }) {
   );
 }
 
+export function RoseFlower({ size = 90, color = "#E47A5A", style, className = "" }) {
+  return (
+    <svg className={`flower-item ${className}`} width={size} height={size} viewBox="0 0 100 100" style={style}>
+      <g fill={color} opacity="0.95">
+        {[0, 45, 90, 135, 180, 225, 270, 315].map((r) => (
+          <path
+            key={r}
+            d="M 50,50 Q 30,10 50,2 Q 70,10 50,50"
+            transform={`rotate(${r} 50 50)`}
+          />
+        ))}
+        {[22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5].map((r) => (
+          <path
+            key={r}
+            d="M 50,50 Q 36,20 50,14 Q 64,20 50,50"
+            fill="#D8712E"
+            transform={`rotate(${r} 50 50)`}
+          />
+        ))}
+        <circle cx="50" cy="50" r="14" fill="#8c3818" />
+        <circle cx="50" cy="50" r="8" fill="#F1D3B0" />
+      </g>
+    </svg>
+  );
+}
+
+export function DaisyFlower({ size = 85, petalColor = "#FFF8EE", centerColor = "#D8712E", style, className = "" }) {
+  return (
+    <svg className={`flower-item ${className}`} width={size} height={size} viewBox="0 0 100 100" style={style}>
+      <g>
+        {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((r) => (
+          <ellipse
+            key={r}
+            cx="50"
+            cy="22"
+            rx="6.5"
+            ry="20"
+            fill={petalColor}
+            transform={`rotate(${r} 50 50)`}
+          />
+        ))}
+        <circle cx="50" cy="50" r="14" fill={centerColor} />
+        <circle cx="50" cy="50" r="8" fill="#8c3818" />
+      </g>
+    </svg>
+  );
+}
+
+export function BlossomFlower({ size = 95, petalColor = "#F1D3B0", style, className = "" }) {
+  return (
+    <svg className={`flower-item ${className}`} width={size} height={size} viewBox="0 0 100 100" style={style}>
+      <g fill={petalColor}>
+        {[0, 45, 90, 135, 180, 225, 270, 315].map((r) => (
+          <path
+            key={r}
+            d="M 50,50 Q 25,25 38,8 Q 62,8 75,25 Z"
+            transform={`rotate(${r} 50 50)`}
+          />
+        ))}
+      </g>
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((r) => (
+        <line
+          key={r}
+          x1="50"
+          y1="50"
+          x2="50"
+          y2="30"
+          stroke="#8c3818"
+          strokeWidth="2"
+          transform={`rotate(${r} 50 50)`}
+        />
+      ))}
+      <circle cx="50" cy="50" r="10" fill="#D8712E" />
+    </svg>
+  );
+}
+
+export function Wildflower({ size = 80, petalColor = "#E4A15B", style, className = "" }) {
+  return (
+    <svg className={`flower-item ${className}`} width={size} height={size} viewBox="0 0 100 100" style={style}>
+      <g fill={petalColor}>
+        {[0, 60, 120, 180, 240, 300].map((r) => (
+          <circle key={r} cx="50" cy="26" r="18" transform={`rotate(${r} 50 50)`} />
+        ))}
+      </g>
+      <circle cx="50" cy="50" r="15" fill="#8c3818" />
+      <circle cx="50" cy="50" r="8" fill="#FFF8EE" />
+    </svg>
+  );
+}
+
 export function Flower({ size = 46, petalColor, centerColor = "#8a4a1f", style, className = "" }) {
   return (
     <svg className={`flower-item ${className}`} width={size} height={size} viewBox="-20 -20 40 40" style={style}>
@@ -191,15 +282,14 @@ export function Flower({ size = 46, petalColor, centerColor = "#8a4a1f", style, 
 }
 
 export function FloralCorner({ className = "" }) {
-  const palette = ["#F1D3B0", "#D8712E", "#E4A15B", "#C1601F", "#F7A862", "#FFFFFF"];
   return (
     <div className={`floral-corner ${className}`}>
-      <Flower size={95} petalColor={palette[0]} className="flower-1" style={{ position: "absolute", left: 0, bottom: 0 }} />
-      <Flower size={75} petalColor={palette[1]} className="flower-2" style={{ position: "absolute", left: 45, bottom: 42 }} />
-      <Flower size={120} petalColor={palette[2]} className="flower-3" style={{ position: "absolute", left: 70, bottom: -10 }} />
-      <Flower size={65} petalColor={palette[3]} className="flower-4" style={{ position: "absolute", left: 140, bottom: 38 }} />
-      <Flower size={85} petalColor={palette[4]} className="flower-5" style={{ position: "absolute", left: 175, bottom: 0 }} />
-      <Flower size={70} petalColor={palette[5]} className="flower-6" style={{ position: "absolute", left: 220, bottom: -5 }} />
+      <RoseFlower size={110} color="#E47A5A" className="flower-1" style={{ position: "absolute", left: 0, bottom: 0 }} />
+      <DaisyFlower size={85} petalColor="#FFF8EE" centerColor="#D8712E" className="flower-2" style={{ position: "absolute", left: 55, bottom: 45 }} />
+      <BlossomFlower size={135} petalColor="#F1D3B0" className="flower-3" style={{ position: "absolute", left: 80, bottom: -12 }} />
+      <Wildflower size={75} petalColor="#E4A15B" className="flower-4" style={{ position: "absolute", left: 160, bottom: 42 }} />
+      <RoseFlower size={95} color="#D8712E" className="flower-5" style={{ position: "absolute", left: 195, bottom: 0 }} />
+      <DaisyFlower size={80} petalColor="#FFFFFF" centerColor="#8c3818" className="flower-6" style={{ position: "absolute", left: 245, bottom: -8 }} />
     </div>
   );
 }

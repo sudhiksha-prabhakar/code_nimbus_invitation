@@ -840,12 +840,16 @@ section {
   overflow: hidden;
 }
 
+.schedule .script-heading {
+  font-size: 52px;
+}
+
 .sched-bg-leaf {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  width: 250px;
-  height: 250px;
+  width: 320px;
+  height: 320px;
   opacity: 0.35;
 }
 
@@ -854,33 +858,35 @@ section {
 }
 
 .sched-bg-leaf.left {
-  top: 60px;
+  top: 50px;
   left: -20px;
 }
 
 .sched-bg-leaf.right {
-  bottom: 60px;
+  bottom: 50px;
   right: -20px;
 }
 
 .schedule-date {
   color: var(--orange-dark);
-  font-size: 20px;
-  margin-top: 6px;
+  font-size: 22px;
+  margin-top: 8px;
   font-weight: 500;
+  letter-spacing: 0.4px;
 }
 
 .schedule-grid {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 90px;
-  margin-top: 50px;
+  gap: 110px;
+  margin-top: 60px;
   position: relative;
   z-index: 2;
 }
 
 .sched-img-wrap {
+  flex: 0 0 400px;
   opacity: 0;
   transform: translateY(30px) scale(0.92);
   transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
@@ -892,7 +898,8 @@ section {
 }
 
 .schedule-img {
-  width: 280px;
+  width: 390px;
+  max-width: 100%;
 }
 
 .timeline {
@@ -903,9 +910,9 @@ section {
 
 .timeline-row {
   display: grid;
-  grid-template-columns: 46px 30px 1fr;
+  grid-template-columns: 56px 36px 1fr;
   align-items: center;
-  min-height: 110px;
+  min-height: 135px;
   opacity: 0;
   transform: translateY(35px) scale(0.9);
 }
@@ -932,6 +939,10 @@ section {
   align-items: center;
   justify-content: center;
 }
+.timeline-icon svg {
+  width: 44px;
+  height: 44px;
+}
 .timeline-line {
   display: flex;
   flex-direction: column;
@@ -940,27 +951,28 @@ section {
   position: relative;
 }
 .timeline-line .dot {
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--maroon-2);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 .timeline-line .bar {
-  width: 2px;
+  width: 2.5px;
   flex: 1;
   background: var(--maroon-2);
   opacity: 0.5;
 }
 .timeline-text h4 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--maroon-2);
 }
 .timeline-text p {
-  font-size: 17px;
-  color: var(--text);
-  margin-top: 4px;
+  font-size: 20px;
+  color: var(--orange-dark);
+  font-weight: 500;
+  margin-top: 6px;
 }
 
 /* ---------- venue ---------- */
